@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accademia delle Lingue | Centro di Eccellenza per la Formazione Linguistica</title>
+    <meta name="description" content="Piattaforma e-learning per la certificazione linguistica Inglese, Italiana e Kiswahili. Preparazione esami TOEFL, TOEIC, Trinity College.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-navy: #1a365d;
+            --primary-gold: #b8860b;
+            --secondary-gold: #d4af37;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --bg-warm: #faf9f7;
+            --bg-cream: #f7f5f0;
+            --border-light: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: var(--bg-warm);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Top Bar Istituzionale */
+        .top-bar {
+            background-color: var(--primary-navy);
+            color: rgba(255,255,255,0.9);
+            padding: 0.5rem 0;
+            font-size: 0.85rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            border-bottom: 3px solid var(--primary-gold);
+            text-align: center;
+        }
+
+        /* Header Principale */
+        header {
+            background: linear-gradient(to bottom, #ffffff, var(--bg-cream));
+            padding: 2rem 0 0 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem 2rem;
+            text-align: center;
+        }
+
+        .header-text h1 {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.2rem;
+            color: var(--primary-navy);
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .header-text .subtitle {
+            font-size: 1.1rem;
+            color: var(--primary-gold);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .header-text .tagline {
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: var(--text-light);
+            font-family: 'Crimson Text', serif;
+        }
+
+        /* Hero Image */
+        .hero-image-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1rem 2rem;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Hero Section Testo */
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border-light);
+            margin-bottom: 4rem;
+        }
+
+        .hero h2 {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.5rem;
+            color: var(--primary-navy);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Sezione Introduzione */
+        .intro-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            margin-bottom: 4rem;
+            border-left: 4px solid var(--primary-gold);
+        }
+
+        .intro-section h3 {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.8rem;
+            color: var(--primary-navy);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .intro-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            text-align: justify;
+            margin-bottom: 1rem;
+        }
+
+        /* Sezione Piattaforme */
+        .platforms-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h3 {
+            font-family: 'Crimson Text', serif;
+            font-size: 2rem;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+        }
+
+        .section-header::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--primary-gold);
+            margin: 1rem auto 0;
+        }
+
+        .platforms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .platform-card {
+            background: white;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-light);
+            position: relative;
+        }
+
+        .platform-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-gold);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .platform-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+
+        .platform-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .platform-card a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .platform-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: var(--bg-cream);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .platform-content {
+            padding: 1.5rem;
+        }
+
+        .platform-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.3rem;
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .platform-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .platform-arrow {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--primary-gold);
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-navy);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 6rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .footer-divider {
+            width: 60px;
+            height: 2px;
+            background: var(--primary-gold);
+            margin: 1rem auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-text h1 {
+                font-size: 1.6rem;
+            }
+
+            .platforms-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-section {
+                padding: 2rem;
+            }
+
+            .hero-image-container {
+                padding: 0 0.5rem 1.5rem;
+            }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+
+    <div class="top-bar">
+        <span>PIATTAFORMA DI FORMAZIONE LINGUISTICA AVANZATA</span>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Accademia delle Lingue</h1>
+                <div class="subtitle">Centro di Eccellenza per la Formazione Linguistica</div>
+                <div class="tagline">"Sapientia et Lingua: la conoscenza attraverso le parole"</div>
+            </div>
+        </div>
+        <div class="hero-image-container">
+            <img src="./chatgpt-image-feb-19-2026-11-19-29-pm_orig.png" alt="Accademia delle Lingue - Eccellenza nella Formazione Linguistica" class="hero-image">
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Piattaforma di E-Learning Accademico</h2>
+            <p>Sistema integrato di formazione linguistica avanzata per la preparazione alle certificazioni internazionali e l'apprendimento permanente.</p>
+        </section>
+
+        <section class="intro-section">
+            <h3>Presentazione Istituzionale</h3>
+            <p>L'Accademia delle Lingue rappresenta un centro di eccellenza nella formazione linguistica a distanza, operante nel campo dell'apprendimento permanente e della certificazione delle competenze. L'istituto sviluppa piattaforme e-learning attraverso un percorso pluriennale di ricerca didattica e sperimentazione pedagogica.</p>
+            
+            <p>Il sistema proposto consente l'apprendimento autonomo delle lingue straniere con successive verifiche delle competenze acquisite. L'accesso alla piattaforma è riservato agli utenti registrati, garantendo un ambiente strutturato e sicuro.</p>
+            
+            <p>L'architettura didattica comprende moduli di studio teorico, esercitazioni interattive e sistema di simulazione esami con rilevamento prestazionale immediato, feedback automatico e analisi degli errori. Tale approccio garantisce una preparazione ottimale agli esami ufficiali TOEFL, TOEIC, Trinity College e CECOL.</p>
+        </section>
+
+        <section class="platforms-section" id="piattaforme">
+            <div class="section-header">
+                <h3>Portali Didattici</h3>
+            </div>
+            
+            <div class="platforms-grid">
+                <article class="platform-card">
+                    <a href="https://nucleoeducativo-nefeli.github.io/ACCADEMIA-DELLE-LINGUE/" target="_blank">
+                        <img src="./chatgpt-image-mar-10-2026-11-18-14-pm_orig.png" alt="Portale Principale" class="platform-image">
+                        <div class="platform-content">
+                            <h4 class="platform-title">Portale Accademico Principale</h4>
+                            <p class="platform-desc">Accesso al sistema integrato di apprendimento linguistico generale e certificazione delle competenze.</p>
+                            <span class="platform-arrow">ACCEDI →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="platform-card">
+                    <a href="https://nucleoeducativo-nefeli.github.io/ACCADEMIA-DELLE-LINGUE-TRINITY-COLLEGE/" target="_blank">
+                        <img src="./chatgpt-image-feb-19-2026-10-55-09-pm_orig.png" alt="Trinity College" class="platform-image">
+                        <div class="platform-content">
+                            <h4 class="platform-title">Preparazione Trinity College</h4>
+                            <p class="platform-desc">Modulo specifico per la preparazione agli esami GESE e ISE del Trinity College London.</p>
+                            <span class="platform-arrow">ACCEDI →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="platform-card">
+                    <a href="https://nucleoeducativo-nefeli.github.io/ACCADEMIA-DELLE-LINGUE-TOEFL-AND-TOEIC/" target="_blank">
+                        <img src="./chatgpt-image-feb-21-2026-08-05-23-pm_orig.png" alt="TOEFL TOEIC" class="platform-image">
+                        <div class="platform-content">
+                            <h4 class="platform-title">Preparazione TOEFL & TOEIC</h4>
+                            <p class="platform-desc">Percorso dedicato alla certificazione English Testing System per contesti accademici e professionali.</p>
+                            <span class="platform-arrow">ACCEDI →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="platform-card">
+                    <a href="https://nucleoeducativo-nefeli.github.io/ACCADEMIA-DELLE-LINGUE--KISWAHILI-ACADEMY/" target="_blank">
+                        <img src="./kiswahili_orig.png" alt="Kiswahili" class="platform-image">
+                        <div class="platform-content">
+                            <h4 class="platform-title">Kiswahili Academy</h4>
+                            <p class="platform-desc">Centro specializzato nell'insegnamento della lingua swahili e delle culture dell'Africa orientale.</p>
+                            <span class="platform-arrow">ACCEDI →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="platform-card">
+                    <a href="https://nucleoeducativo-nefeli.github.io/giochi-didattici/" target="_blank">
+                        <img src="./ac6b5a7a-da37-43db-b18d-9ab57efdd634_orig.png" alt="Giochi Didattici" class="platform-image">
+                        <div class="platform-content">
+                            <h4 class="platform-title">Laboratorio Didattico Interattivo</h4>
+                            <p class="platform-desc">Ambiente di apprendimento ludico per il consolidamento delle competenze linguistiche attraverso attività interattive.</p>
+                            <span class="platform-arrow">ACCEDI →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="platform-card">
+                    <a href="https://nucleoeducativo-nefeli.github.io/simulazione-esami-cecol/" target="_blank">
+                        <img src="./e11553dc-5d19-4f22-82df-446c8f0fbae8_orig.png" alt="Simulazione CECOL" class="platform-image">
+                        <div class="platform-content">
+                            <h4 class="platform-title">Simulazione Esami CECOL</h4>
+                            <p class="platform-desc">Piattaforma di testing per la simulazione completa degli esami di certificazione con valutazione automatizzata.</p>
+                            <span class="platform-arrow">ACCEDI →</span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-divider"></div>
+            <p>&copy; 2026 Accademia delle Lingue. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
