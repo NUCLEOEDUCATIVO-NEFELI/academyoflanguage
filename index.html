@@ -3,260 +3,1090 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Accademia delle Lingue | Centro di Eccellenza per la Formazione Linguistica</title>
-<meta name="description" content="Piattaforma e-learning accademica per la certificazione linguistica: TOEFL, TOEIC, Trinity College, Lingua Italiana e Kiswahili.">
+<title>Accademia delle Lingue | Certifica la tua lingua. Cambia il tuo futuro.</title>
+<meta name="description" content="Preparazione alle certificazioni linguistiche internazionali: TOEFL, TOEIC, Trinity College, Italiano L2 e Kiswahili. Simulazioni d'esame con feedback immediato, accesso 24/7.">
+<meta property="og:title" content="Accademia delle Lingue | Certifica la tua lingua">
+<meta property="og:description" content="Il metodo che ti porta al certificato: moduli guidati, simulazioni d'esame reali e feedback automatico immediato.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0b1b33">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1b33'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%23e8c766' text-anchor='middle'%3EAL%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Serif+4:wght@400;600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#6b1f2f;--navy2:#4a1420;--wine:#86651f;--gold:#b8963e;--gold2:#d9c27f;--ink:#2a2723;--mute:#6a655b;--paper:#fdfbf6;--cream:#f6f0e3;--line:#e3d9c2;--mint:#f6f0e3}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Source Serif 4',Georgia,serif;background:var(--paper);color:var(--ink);line-height:1.75;-webkit-font-smoothing:antialiased}
+:root{
+  --navy:#0b1b33;
+  --navy-2:#122a4d;
+  --navy-3:#183a68;
+  --gold:#c9a227;
+  --gold-2:#e8c766;
+  --gold-soft:#f3e4b8;
+  --cream:#faf8f3;
+  --cream-2:#f2eee5;
+  --ink:#16202f;
+  --muted:#5f6b7c;
+  --line:#e4dfd3;
+  --white:#fff;
+  --shadow-sm:0 1px 2px rgba(11,27,51,.06),0 2px 8px rgba(11,27,51,.05);
+  --shadow-md:0 4px 12px rgba(11,27,51,.07),0 12px 32px rgba(11,27,51,.07);
+  --shadow-lg:0 12px 32px rgba(11,27,51,.10),0 32px 64px rgba(11,27,51,.10);
+  --r-sm:10px; --r-md:16px; --r-lg:24px; --r-xl:32px;
+  --max:1180px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:'Crimson Pro',Garamond,Georgia,'Times New Roman',serif;
+  background:var(--cream);color:var(--ink);
+  font-size:18px;
+  line-height:1.66;-webkit-font-smoothing:antialiased;
+  font-kerning:normal;
+  font-variant-ligatures:common-ligatures;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1140px;margin:0 auto;padding:0 1.5rem}
-.sans{font-family:'Source Sans 3',system-ui,sans-serif}
-.topbar{background:var(--mint);color:var(--navy2);font-family:'Source Sans 3',sans-serif;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;text-align:center;padding:.55rem 1rem;border-bottom:3px double var(--gold)}
-header.mast{background:linear-gradient(#fff,#f6f0e3);text-align:center;padding:2.6rem 1rem 1.6rem;border-bottom:1px solid var(--line)}
-.crest{width:64px;height:64px;margin:0 auto .8rem;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--wine);font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;background:#fff;box-shadow:0 0 0 5px #fff,0 0 0 6px var(--gold2)}
-.mast h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,3.4rem);color:var(--navy);letter-spacing:2px;line-height:1.1;font-weight:700}
-.mast .sub{font-family:'Source Sans 3',sans-serif;color:var(--wine);text-transform:uppercase;letter-spacing:3px;font-size:.85rem;font-weight:700;margin-top:.6rem}
-.mast .motto{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem;color:var(--mute);margin-top:.4rem}
-nav.menu{background:#fff;border-bottom:1px solid var(--line);box-shadow:0 4px 14px rgba(74,20,32,.08);position:sticky;top:0;z-index:20}
-nav.menu .wrap{display:flex;justify-content:center;flex-wrap:wrap;gap:0}
-nav.menu a{font-family:'Source Sans 3',sans-serif;color:var(--navy);font-size:.82rem;letter-spacing:1.5px;text-transform:uppercase;padding:.95rem 1.4rem;border-bottom:3px solid transparent;transition:.2s}
-nav.menu a:hover{border-color:var(--wine);color:var(--wine)}
-.hero{padding:3.5rem 0 3rem}
-.hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:3.2rem;align-items:center}
-.eyebrow{font-family:'Source Sans 3',sans-serif;color:var(--wine);font-weight:700;letter-spacing:3px;font-size:.78rem;text-transform:uppercase}
-.hero h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,2.9rem);color:var(--navy);line-height:1.15;margin:.6rem 0 1rem;font-weight:700}
-.hero p{color:var(--mute);font-size:1.05rem;margin-bottom:1.6rem}
-.btns{display:flex;gap:.9rem;flex-wrap:wrap}
-.btn{font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.88rem;letter-spacing:1.5px;text-transform:uppercase;padding:.9rem 1.8rem;border:2px solid var(--navy);transition:.2s;display:inline-block}
-.btn.fill{background:var(--navy);color:#fff}
-.btn.fill:hover{background:var(--wine);border-color:var(--wine)}
-.btn.out{color:var(--navy)}
-.btn.out:hover{background:var(--navy);color:#fff}
-.plate{padding:10px;background:#fff;border:1px solid var(--line);box-shadow:0 18px 40px rgba(74,20,32,.16);position:relative}
-.plate:before{content:"";position:absolute;inset:-9px 9px 9px -9px;border:1px solid var(--gold);z-index:-1}
-.plate img{width:100%;display:block}
-.facts{background:var(--mint);color:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
-.fact{text-align:center;padding:1.6rem .8rem;border-right:1px solid var(--line)}
-.fact:last-child{border:0}
-.fact b{display:block;font-family:'Cormorant Garamond',serif;font-size:2.1rem;color:var(--wine);line-height:1.1}
-.fact span{font-family:'Source Sans 3',sans-serif;font-size:.76rem;letter-spacing:2px;text-transform:uppercase;color:var(--mute)}
-section{padding:4.2rem 0}
-.head{text-align:center;max-width:46rem;margin:0 auto 3rem}
-.head h3{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--navy);font-weight:700;line-height:1.2}
-.rule{display:flex;align-items:center;gap:.8rem;justify-content:center;margin:.9rem 0}
-.rule:before,.rule:after{content:"";height:1px;width:70px;background:var(--gold)}
-.rule i{width:8px;height:8px;background:var(--wine);transform:rotate(45deg)}
-.head p{color:var(--mute)}
-.intro{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:2.4rem}
-.cols h4{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--wine);margin-bottom:.5rem}
-.cols p{font-size:.96rem;color:var(--mute);text-align:justify;hyphens:auto}
-.cols>div{border-top:3px solid var(--gold);padding-top:1.1rem}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
-.card{background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;transition:.25s;position:relative}
-.card:hover{transform:translateY(-6px);box-shadow:0 20px 42px rgba(74,20,32,.14);border-color:var(--gold)}
-.card .img{aspect-ratio:16/10;overflow:hidden;border-bottom:3px solid var(--gold);background:var(--cream)}
-.card img{width:100%;height:100%;object-fit:cover;display:block;transition:.5s}
-.card:hover img{transform:scale(1.05)}
-.num{position:absolute;top:.8rem;left:.8rem;background:#fff;border:1px solid var(--gold);color:var(--wine);font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.05rem;padding:.1rem .8rem;letter-spacing:2px}
-.cb{padding:1.5rem 1.5rem 1.7rem;display:flex;flex-direction:column;flex:1}
-.area{font-family:'Source Sans 3',sans-serif;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--wine);font-weight:700}
-.cb h4{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--navy);line-height:1.2;margin:.3rem 0 .6rem}
-.cb p{font-size:.93rem;color:var(--mute);flex:1;margin-bottom:1.1rem}
-.acc{font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:2px;color:var(--navy);text-transform:uppercase;border-top:1px solid var(--line);padding-top:.9rem;display:flex;justify-content:space-between}
-.card:hover .acc{color:var(--wine)}
-.method{background:var(--cream)}
-.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem}
-.pil{text-align:center;padding:1.8rem 1.2rem;background:#fff;border:1px solid var(--line)}
-.pil .n{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--gold);line-height:1}
-.pil h4{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--navy);margin:.4rem 0}
-.pil p{font-size:.9rem;color:var(--mute);line-height:1.6}
-.cert{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:900px;margin:0 auto}
-.cert div{border:1px solid var(--gold);padding:1.1rem .5rem;text-align:center;font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:700;color:var(--navy);background:#fff}
-.cert small{display:block;font-family:'Source Sans 3',sans-serif;font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--mute);font-weight:400}
-.band{background:linear-gradient(135deg,#f6f0e3,#fbf6ea);color:var(--navy2);text-align:center;padding:4rem 1.5rem;border-top:3px double var(--gold)}
-.band h3{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.7rem}
-.band p{color:var(--mute);max-width:38rem;margin:0 auto 1.7rem}
-.band .btn{background:var(--wine);border-color:var(--wine);color:#fff}
-.band .btn:hover{background:var(--navy);border-color:var(--navy)}
-footer{background:var(--mint);border-top:1px solid var(--line);color:var(--mute);text-align:center;padding:2.4rem 1rem;font-family:'Source Sans 3',sans-serif;font-size:.85rem}
-footer b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--navy2);letter-spacing:2px;margin-bottom:.3rem}
+h1,h2,h3,h4{font-family:'Crimson Pro',Garamond,Georgia,'Times New Roman',serif;font-weight:600;line-height:1.1;letter-spacing:0;font-variant-ligatures:common-ligatures}
+p,li{font-feature-settings:"kern" 1}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.section{padding:104px 0}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold);
+}
+.eyebrow::before{content:'';width:22px;height:1.5px;background:var(--gold);display:block}
+.section-head{max-width:680px;margin-bottom:56px}
+.section-head h2{font-size:clamp(1.9rem,3.6vw,2.9rem);color:var(--navy);margin:14px 0 16px}
+.section-head p{color:var(--muted);font-size:1.06rem}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.section-head.center .eyebrow::before{display:none}
+.section-head.center .eyebrow{padding:7px 14px;border:1px solid rgba(201,162,39,.35);border-radius:99px;background:rgba(201,162,39,.06)}
 
-.cols>div:first-child p:first-letter{font-family:'Cormorant Garamond',serif;float:left;font-size:3.6rem;line-height:.8;padding:.3rem .5rem 0 0;color:var(--navy);font-weight:700}
-.head h3{font-variant:small-caps;letter-spacing:1px}
-.crest{border-color:var(--gold);color:var(--navy)}
-.plate{border:1px solid var(--gold)}
-.card{border-top:3px double var(--gold)}
-.pil,.cert div{border-style:double;border-width:3px;border-color:var(--gold2)}
-.mast .motto:before,.mast .motto:after{content:"❦";color:var(--gold);margin:0 .7rem;font-style:normal;font-size:.95rem}
-@media(max-width:960px){.hero .wrap{grid-template-columns:1fr}.grid,.cols,.pillars{grid-template-columns:1fr 1fr}.facts .wrap{grid-template-columns:1fr 1fr}.cert{grid-template-columns:1fr 1fr}.fact:nth-child(2){border:0}}
-@media(max-width:620px){.grid,.cols,.pillars{grid-template-columns:1fr}nav.menu a{padding:.8rem .8rem;font-size:.72rem}section{padding:3rem 0}.cols p{text-align:left}}
+/* ============ NAV ============ */
+.nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(250,248,243,.82);
+  backdrop-filter:blur(18px) saturate(160%);
+  -webkit-backdrop-filter:blur(18px) saturate(160%);
+  border-bottom:1px solid rgba(228,223,211,.9);
+  transition:box-shadow .3s ease,background .3s ease;
+}
+.nav.scrolled{box-shadow:0 6px 24px rgba(11,27,51,.07);background:rgba(250,248,243,.95)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 24px;height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.brand-mark{
+  width:42px;height:42px;border-radius:12px;flex-shrink:0;
+  background:linear-gradient(145deg,var(--navy-2),var(--navy));
+  display:grid;place-items:center;position:relative;overflow:hidden;
+  box-shadow:0 4px 14px rgba(11,27,51,.22);
+}
+.brand-mark::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(232,199,102,.28),transparent 60%)}
+.brand-mark span{font-family:'Crimson Pro',Garamond,Georgia,serif;font-size:1.12rem;font-weight:700;color:var(--gold-2);position:relative;z-index:1;letter-spacing:0}
+.brand-txt{display:flex;flex-direction:column;line-height:1.15}
+.brand-txt b{font-family:'Crimson Pro',Garamond,Georgia,serif;font-size:1.02rem;color:var(--navy);font-weight:600;letter-spacing:0}
+.brand-txt small{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:6px;margin-left:auto}
+.nav-links a{
+  font-size:.88rem;font-weight:500;color:#3c4a5e;padding:9px 14px;border-radius:99px;
+  transition:color .2s,background .2s;
+}
+.nav-links a:hover{color:var(--navy);background:rgba(11,27,51,.05)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:'Crimson Pro',Garamond,Georgia,serif;font-size:.94rem;font-weight:600;
+  padding:13px 24px;border-radius:99px;border:1.5px solid transparent;
+  cursor:pointer;transition:transform .18s ease,box-shadow .22s ease,background .22s ease,color .22s ease;
+  white-space:nowrap;line-height:1;
+}
+.btn:active{transform:translateY(1px) scale(.995)}
+.btn-primary{background:linear-gradient(135deg,var(--navy-2),var(--navy));color:#fff;box-shadow:0 6px 20px rgba(11,27,51,.24)}
+.btn-primary:hover{box-shadow:0 10px 28px rgba(11,27,51,.32);transform:translateY(-2px)}
+.btn-gold{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:#20180a;box-shadow:0 6px 20px rgba(201,162,39,.32)}
+.btn-gold:hover{box-shadow:0 12px 32px rgba(201,162,39,.42);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--navy);border-color:rgba(11,27,51,.18)}
+.btn-ghost:hover{background:var(--white);border-color:rgba(11,27,51,.32);transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.btn-lg{padding:17px 32px;font-size:1rem}
+.nav-cta{padding:11px 22px;font-size:.87rem}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);background:#fff;border-radius:12px;cursor:pointer;place-items:center;flex-shrink:0}
+.burger span{display:block;width:18px;height:1.8px;background:var(--navy);border-radius:2px;position:relative;transition:.25s}
+.burger span::before,.burger span::after{content:'';position:absolute;left:0;width:18px;height:1.8px;background:var(--navy);border-radius:2px;transition:.25s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.burger.open span{background:transparent}
+.burger.open span::before{top:0;transform:rotate(45deg)}
+.burger.open span::after{top:0;transform:rotate(-45deg)}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 520px at 82% -6%,rgba(201,162,39,.16),transparent 62%),
+    radial-gradient(760px 480px at 6% 12%,rgba(24,58,104,.10),transparent 60%),
+    linear-gradient(180deg,#fffdf9 0%,var(--cream) 62%);
+  padding:clamp(56px,7vw,92px) 0 clamp(72px,8vw,110px);
+}
+.hero::after{
+  content:'';position:absolute;inset:0;pointer-events:none;opacity:.42;
+  background-image:radial-gradient(rgba(11,27,51,.06) 1px,transparent 1px);
+  background-size:26px 26px;
+  -webkit-mask-image:radial-gradient(circle at 50% 0%,#000,transparent 72%);
+  mask-image:radial-gradient(circle at 50% 0%,#000,transparent 72%);
+}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(32px,5vw,64px);align-items:center}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:9px;
+  background:rgba(255,255,255,.85);border:1px solid rgba(201,162,39,.32);
+  padding:7px 8px 7px 14px;border-radius:99px;font-size:.76rem;font-weight:600;color:var(--navy);
+  box-shadow:var(--shadow-sm);margin-bottom:26px;
+}
+.hero-badge em{
+  font-style:normal;background:var(--gold);color:#20180a;font-size:.68rem;font-weight:800;
+  letter-spacing:.06em;padding:4px 10px;border-radius:99px;
+}
+.hero h1{
+  font-size:clamp(2.5rem,5.4vw,4.05rem);
+  color:var(--navy);letter-spacing:-.008em;line-height:1.06;margin-bottom:22px;
+}
+.hero h1 .accent{
+  background:linear-gradient(100deg,var(--gold) 0%,#a8830f 52%,var(--gold-2) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  font-style:italic;
+}
+.hero-sub{font-size:clamp(1.02rem,1.5vw,1.16rem);color:#4a5768;max-width:520px;margin-bottom:34px;line-height:1.7}
+.hero-sub strong{color:var(--navy);font-weight:600}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:34px}
+.hero-trust{display:flex;flex-wrap:wrap;align-items:center;gap:10px 20px;padding-top:26px;border-top:1px solid rgba(228,223,211,.9)}
+.hero-trust span{font-size:.73rem;letter-spacing:.1em;text-transform:uppercase;color:#8b8577;font-weight:700}
+.hero-trust ul{display:flex;flex-wrap:wrap;gap:8px;list-style:none}
+.hero-trust li{
+  font-family:'Crimson Pro',Garamond,Georgia,serif;font-size:.82rem;font-weight:600;color:var(--navy-3);
+  padding:5px 13px;border:1px solid rgba(11,27,51,.13);border-radius:99px;background:rgba(255,255,255,.6);
+}
+
+/* hero visual */
+.hero-visual{position:relative}
+.frame{
+  position:relative;border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid rgba(255,255,255,.85);
+  box-shadow:0 22px 60px rgba(11,27,51,.20),0 4px 16px rgba(11,27,51,.10);
+  background:linear-gradient(150deg,var(--navy-3),var(--navy));
+  aspect-ratio:4/3.35;
+}
+.frame img{width:100%;height:100%;object-fit:cover;transition:opacity .4s ease}
+.frame::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 55%,rgba(11,27,51,.42));
+  pointer-events:none;
+}
+.frame-cap{
+  position:absolute;left:20px;right:20px;bottom:18px;z-index:2;color:#fff;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+.frame-cap b{font-family:'Crimson Pro',Garamond,Georgia,serif;font-size:1rem;font-weight:600}
+.frame-cap span{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-2);font-weight:700}
+.float-card{
+  position:absolute;z-index:3;background:#fff;border-radius:14px;
+  box-shadow:0 14px 40px rgba(11,27,51,.18);padding:11px 15px;
+  display:flex;align-items:center;gap:10px;
+  animation:float 5.5s ease-in-out infinite;
+}
+.float-card .dot{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;flex-shrink:0;font-size:.9rem}
+.float-card b{display:block;font-size:.8rem;color:var(--navy);line-height:1.3;font-weight:700}
+.float-card small{font-size:.68rem;color:#8b94a1;line-height:1.3}
+.fc-1{top:-18px;left:-22px;animation-delay:0s}
+.fc-2{bottom:52px;right:-20px;animation-delay:1.6s}
+.fc-1 .dot{background:rgba(201,162,39,.14);color:#a8830f}
+.fc-2 .dot{background:rgba(24,58,104,.10);color:var(--navy-3)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+
+/* ============ STAT BAND ============ */
+.band{background:var(--navy);position:relative;overflow:hidden}
+.band::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(700px 220px at 20% 0%,rgba(201,162,39,.18),transparent 70%),
+             radial-gradient(600px 260px at 88% 100%,rgba(24,58,104,.7),transparent 70%);
+}
+.band-inner{position:relative;z-index:1;max-width:var(--max);margin:0 auto;padding:44px 24px;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.band-item{text-align:center;position:relative}
+.band-item + .band-item::before{content:'';position:absolute;left:-12px;top:12%;height:76%;width:1px;background:rgba(255,255,255,.13)}
+.band-item b{display:block;font-family:'Crimson Pro',Garamond,Georgia,serif;font-size:clamp(1.5rem,2.6vw,2.05rem);color:var(--gold-2);font-weight:600;letter-spacing:0;line-height:1.1}
+.band-item small{display:block;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.62);margin-top:7px;font-weight:500}
+
+/* ============ PLATFORMS ============ */
+.platforms{background:linear-gradient(180deg,var(--cream) 0%,#fffdf9 100%)}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;
+  display:flex;flex-direction:column;position:relative;
+  box-shadow:0 1px 2px rgba(11,27,51,.04);
+  transition:transform .32s cubic-bezier(.22,1,.36,1),box-shadow .32s ease,border-color .32s ease;
+}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:rgba(201,162,39,.4)}
+.card > a,.card > .card-static{display:flex;flex-direction:column;height:100%;color:inherit;text-decoration:none}
+.card.is-static{cursor:default}
+.card.is-static:hover{transform:none;box-shadow:0 1px 2px rgba(11,27,51,.04);border-color:var(--line)}
+.card-top{position:relative;height:186px;overflow:hidden;background:linear-gradient(150deg,var(--navy-3),var(--navy))}
+.card-top::before{
+  content:'';position:absolute;inset:0;z-index:0;
+  background:
+    radial-gradient(280px 180px at 22% 18%,rgba(201,162,39,.34),transparent 68%),
+    linear-gradient(135deg,#1e4778,#0b1b33 72%);
+}
+.card-top::after{
+  content:'';position:absolute;inset:0;z-index:1;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);
+  background-size:22px 22px;
+}
+.card-top img{position:relative;z-index:2;width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.22,1,.36,1),opacity .35s ease}
+.card:hover .card-top img{transform:scale(1.05)}
+.card-ph{position:absolute;inset:0;z-index:1;display:grid;place-items:center;pointer-events:none}
+.card-ph span{
+  font-family:'Crimson Pro',Garamond,Georgia,serif;font-size:2.6rem;font-weight:700;letter-spacing:0;
+  color:rgba(255,255,255,.20);
+}
+.card-flag{
+  position:absolute;z-index:3;top:14px;left:14px;
+  font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  padding:5px 11px;border-radius:99px;background:rgba(255,255,255,.94);color:var(--navy);
+  box-shadow:0 2px 8px rgba(0,0,0,.12);
+}
+.card-body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1}
+.card-body h3{font-size:1.18rem;color:var(--navy);margin-bottom:9px;letter-spacing:0}
+.card-body p{font-size:.92rem;color:var(--muted);line-height:1.62;flex:1}
+.card-link{
+  display:inline-flex;align-items:center;gap:8px;margin-top:20px;
+  font-size:.84rem;font-weight:700;letter-spacing:.03em;color:var(--navy);
+  padding-top:16px;border-top:1px solid rgba(228,223,211,.85);
+}
+.card-link svg{transition:transform .28s ease}
+.card:hover .card-link svg{transform:translateX(4px)}
+.card:hover .card-link{color:var(--gold)}
+
+/* ============ METHOD ============ */
+.method{background:var(--cream);position:relative}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.step{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-md);
+  padding:28px 24px 26px;position:relative;transition:transform .3s ease,box-shadow .3s ease;
+}
+.step:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.step-num{
+  width:38px;height:38px;border-radius:11px;display:grid;place-items:center;
+  font-family:'Crimson Pro',Garamond,Georgia,serif;font-weight:700;font-size:1rem;color:var(--navy);
+  background:linear-gradient(145deg,var(--gold-soft),#fdf6e2);
+  border:1px solid rgba(201,162,39,.35);margin-bottom:18px;
+}
+.step h3{font-size:1.02rem;color:var(--navy);margin-bottom:8px;letter-spacing:0}
+.step p{font-size:.88rem;color:var(--muted);line-height:1.6}
+
+/* ============ CERT ============ */
+.certs{background:linear-gradient(180deg,#fffdf9,var(--cream-2))}
+.cert-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,60px);align-items:center}
+.cert-list{display:grid;gap:14px}
+.cert-row{
+  display:flex;align-items:flex-start;gap:16px;background:#fff;border:1px solid var(--line);
+  border-radius:var(--r-md);padding:20px 22px;transition:border-color .25s,box-shadow .25s,transform .25s;
+}
+.cert-row:hover{border-color:rgba(201,162,39,.45);box-shadow:var(--shadow-sm);transform:translateX(4px)}
+.cert-ico{
+  width:36px;height:36px;border-radius:10px;flex-shrink:0;display:grid;place-items:center;
+  background:rgba(11,27,51,.05);color:var(--navy-3);font-size:.95rem;
+}
+.cert-row b{display:block;font-size:.97rem;color:var(--navy);margin-bottom:4px;font-weight:700;letter-spacing:0}
+.cert-row span{font-size:.86rem;color:var(--muted);line-height:1.55;display:block}
+.quote-box{
+  background:linear-gradient(150deg,var(--navy-2),var(--navy));color:#fff;
+  border-radius:var(--r-xl);padding:clamp(32px,4vw,46px);position:relative;overflow:hidden;
+  box-shadow:0 24px 60px rgba(11,27,51,.22);
+}
+.quote-box::before{
+  content:'\201C';position:absolute;top:-26px;right:14px;font-family:'Crimson Pro',Garamond,Georgia,serif;
+  font-size:11rem;line-height:1;color:rgba(232,199,102,.16);
+}
+.quote-box .eyebrow{color:var(--gold-2);position:relative;z-index:1}
+.quote-box .eyebrow::before{background:var(--gold-2)}
+.quote-box p{position:relative;z-index:1;font-family:'Crimson Pro',Garamond,Georgia,serif;font-size:clamp(1.2rem,2.1vw,1.6rem);line-height:1.44;margin:20px 0 26px;letter-spacing:0}
+.quote-box footer{position:relative;z-index:1;font-size:.82rem;color:rgba(255,255,255,.62);letter-spacing:.04em}
+.quote-box .rule{width:44px;height:2px;background:var(--gold);margin-bottom:18px;position:relative;z-index:1}
+
+/* ============ SOCIO SOSTENITORE ============ */
+.socio{background:linear-gradient(180deg,var(--cream-2),#fffdf9);position:relative;overflow:hidden}
+.socio::before{content:'';position:absolute;inset:0;background:radial-gradient(700px 400px at 88% 4%,rgba(201,162,39,.10),transparent 64%)}
+.socio .wrap{position:relative;z-index:1}
+.istituto{
+  max-width:900px;margin:0 auto 56px;text-align:center;
+  padding:38px 34px;border:1px solid rgba(201,162,39,.32);border-radius:var(--r-lg);
+  background:rgba(255,255,255,.72);box-shadow:var(--shadow-sm);
+}
+.istituto .lbl{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:800;display:block;margin-bottom:14px}
+.istituto h3{font-family:'Crimson Pro',Garamond,Georgia,serif;font-size:clamp(1.25rem,2.4vw,1.7rem);color:var(--navy);line-height:1.3;letter-spacing:0}
+.istituto p{font-size:.95rem;color:var(--muted);margin-top:16px;line-height:1.7}
+.socio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.socio-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:30px 26px;
+  display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+.socio-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:rgba(201,162,39,.4)}
+.socio-card .num{
+  font-family:'Crimson Pro',Garamond,Georgia,serif;font-size:.82rem;font-weight:700;color:var(--gold);
+  letter-spacing:.1em;margin-bottom:14px;
+}
+.socio-card h4{font-family:'Crimson Pro',Garamond,Georgia,serif;font-size:1.1rem;color:var(--navy);margin-bottom:12px;letter-spacing:0}
+.socio-card p{font-size:.89rem;color:var(--muted);line-height:1.68}
+.socio-card ul{list-style:none;display:grid;gap:9px;margin-top:14px}
+.socio-card li{display:flex;gap:9px;font-size:.87rem;color:#3c4a5e;line-height:1.55}
+.socio-card li::before{content:'';flex-shrink:0;width:5px;height:5px;border-radius:50%;background:var(--gold);margin-top:8px}
+.socio-note{
+  max-width:900px;margin:44px auto 0;padding:26px 30px;border-left:3px solid var(--gold);
+  background:rgba(255,255,255,.7);border-radius:0 var(--r-sm) var(--r-sm) 0;
+  font-size:.9rem;color:var(--muted);line-height:1.72;
+}
+.socio-note b{color:var(--navy)}
+.socio-cta{text-align:center;margin-top:40px}
+
+/* ============ PORTALE METODOLOGICO ============ */
+.portale{background:#fffdf9}
+.portale-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.portale-fig{position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg)}
+.portale-fig img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/2}
+.portale-fig figcaption{
+  position:absolute;left:0;right:0;bottom:0;padding:44px 24px 20px;
+  background:linear-gradient(to top,rgba(8,21,39,.86),transparent);
+  color:#fff;font-size:.82rem;letter-spacing:.02em;
+}
+.portale-fig figcaption b{display:block;font-family:'Crimson Pro',Garamond,Georgia,serif;font-size:1rem;font-weight:600;margin-bottom:3px}
+.portale-fig figcaption span{color:rgba(255,255,255,.66)}
+.portale-txt h2{font-size:clamp(1.8rem,3.2vw,2.5rem);color:var(--navy);margin:14px 0 18px}
+.portale-txt > p{color:var(--muted);font-size:1rem;line-height:1.75;margin-bottom:16px}
+.portale-list{list-style:none;display:grid;gap:14px;margin:26px 0 30px}
+.portale-list li{display:flex;gap:13px;align-items:flex-start}
+.portale-list .ico{
+  flex-shrink:0;width:34px;height:34px;border-radius:9px;display:grid;place-items:center;
+  background:rgba(201,162,39,.12);color:var(--gold);
+}
+.portale-list b{display:block;font-size:.93rem;color:var(--navy);font-weight:600;margin-bottom:2px}
+.portale-list span{font-size:.86rem;color:var(--muted);line-height:1.6}
+.portale-link{
+  display:inline-flex;align-items:center;gap:10px;font-size:.86rem;color:var(--navy);
+  background:var(--cream-2);border:1px solid var(--line);border-radius:99px;
+  padding:10px 18px;margin-bottom:26px;word-break:break-all;transition:border-color .2s,background .2s;
+}
+.portale-link:hover{border-color:rgba(201,162,39,.5);background:#fff}
+.portale-link svg{flex-shrink:0;color:var(--gold)}
+
+/* ============ FAQ ============ */
+.faq{background:var(--cream)}
+.faq-list{max-width:820px;margin:0 auto;display:grid;gap:12px}
+details{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-md);
+  padding:0 22px;transition:border-color .25s,box-shadow .25s;
+}
+details[open]{border-color:rgba(201,162,39,.4);box-shadow:var(--shadow-sm)}
+summary{
+  cursor:pointer;list-style:none;padding:20px 34px 20px 0;position:relative;
+  font-size:.98rem;font-weight:600;color:var(--navy);line-height:1.5;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{
+  content:'';position:absolute;right:0;top:50%;width:10px;height:10px;
+  border-right:1.8px solid var(--gold);border-bottom:1.8px solid var(--gold);
+  transform:translateY(-70%) rotate(45deg);transition:transform .28s ease;
+}
+details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+details p{font-size:.91rem;color:var(--muted);line-height:1.68;padding:0 0 22px;max-width:92%}
+
+/* ============ FINAL CTA ============ */
+.final{background:linear-gradient(150deg,var(--navy-2) 0%,var(--navy) 62%,#081527 100%);position:relative;overflow:hidden}
+.final::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(760px 380px at 78% 0%,rgba(201,162,39,.20),transparent 66%),
+             radial-gradient(560px 320px at 8% 100%,rgba(24,58,104,.9),transparent 70%);
+}
+.final-inner{position:relative;z-index:1;max-width:820px;margin:0 auto;padding:96px 24px;text-align:center;color:#fff}
+.final h2{font-size:clamp(2rem,4.4vw,3.1rem);color:#fff;margin-bottom:18px;letter-spacing:-.008em}
+.final h2 em{font-style:italic;color:var(--gold-2)}
+.final p{color:rgba(255,255,255,.72);font-size:1.06rem;max-width:600px;margin:0 auto 34px;line-height:1.7}
+.final-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.final .btn-ghost{color:#fff;border-color:rgba(255,255,255,.28)}
+.final .btn-ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.45)}
+
+/* ============ FOOTER ============ */
+footer.site{background:#081527;color:rgba(255,255,255,.62);padding:56px 0 32px;border-top:1px solid rgba(255,255,255,.08)}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;margin-bottom:44px}
+.foot-brand .brand-txt b{color:#fff}
+.foot-brand p{font-size:.87rem;line-height:1.7;margin-top:16px;max-width:330px;color:rgba(255,255,255,.52)}
+.foot-col h4{font-family:'Crimson Pro',Garamond,Georgia,serif;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-2);margin-bottom:16px;font-weight:700}
+.foot-col ul{list-style:none;display:grid;gap:10px}
+.foot-col a{font-size:.87rem;color:rgba(255,255,255,.6);transition:color .2s}
+.foot-col a:hover{color:var(--gold-2)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.09);padding-top:24px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;font-size:.79rem;color:rgba(255,255,255,.42)}
+.foot-bottom .lat{font-family:'Crimson Pro',Garamond,Georgia,serif;font-style:italic;font-size:.85rem;color:rgba(232,199,102,.62)}
+
+/* ============ REVEAL ============ */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+.rv.in{opacity:1;transform:none}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;gap:44px}
+  .hero-visual{max-width:560px;margin:0 auto;width:100%}
+  .grid-3{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .cert-grid{grid-template-columns:1fr}
+  .socio-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}
+  .portale-grid{grid-template-columns:1fr;gap:36px}
+  .portale-fig{order:-1}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media (max-width:860px){
+  .nav-links{
+    position:fixed;top:74px;left:0;right:0;
+    background:rgba(250,248,243,.98);backdrop-filter:blur(20px);
+    flex-direction:column;align-items:stretch;gap:2px;
+    padding:14px 18px 22px;border-bottom:1px solid var(--line);
+    box-shadow:0 16px 40px rgba(11,27,51,.1);
+    transform:translateY(-12px);opacity:0;pointer-events:none;transition:.28s ease;
+  }
+  .nav-links.open{transform:none;opacity:1;pointer-events:auto}
+  .nav-links a{padding:13px 14px;border-radius:10px;font-size:.95rem}
+  .nav-links .btn{margin-top:10px;width:100%}
+  .nav-cta{display:none}
+  .burger{display:grid}
+  .section{padding:72px 0}
+  .band-inner{grid-template-columns:repeat(2,1fr);gap:30px 20px;padding:38px 24px}
+  .band-item + .band-item::before{display:none}
+  .band-item:nth-child(odd)::after{content:'';position:absolute;right:-10px;top:10%;height:80%;width:1px;background:rgba(255,255,255,.11)}
+}
+@media (max-width:640px){
+  .grid-3{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .hero h1{font-size:clamp(2.1rem,8vw,2.7rem)}
+  .hero-actions .btn{width:100%}
+  .final-actions .btn{width:100%}
+  .float-card{display:none}
+  .hero-trust{gap:10px}
+  .hero-trust span{width:100%}
+  .brand-txt small{font-size:.57rem}
+  .brand-txt b{font-size:.94rem}
+  .frame{aspect-ratio:1/1}
+  .istituto{padding:28px 22px}
+  .socio-note{padding:22px 20px}
+  .portale-link{font-size:.78rem;padding:9px 14px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
 
-<div class="topbar">Piattaforma di formazione linguistica avanzata · MMXXVI</div>
-
-<header class="mast">
-<div class="crest">A</div>
-<h1>Accademia delle Lingue</h1>
-<div class="sub">Centro di Eccellenza per la Formazione Linguistica</div>
-<div class="motto">“Sapientia et Lingua: la conoscenza attraverso le parole”</div>
+<!-- ==================== NAV ==================== -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="Accademia delle Lingue — home">
+      <div class="brand-mark"><span>AL</span></div>
+      <div class="brand-txt">
+        <b>Accademia delle Lingue</b>
+        <small>Formazione linguistica</small>
+      </div>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Navigazione principale">
+      <a href="#piattaforme">Piattaforme</a>
+      <a href="#portale">Portale</a>
+      <a href="#metodo">Metodo</a>
+      <a href="#certificazioni">Certificazioni</a>
+      <a href="#faq">Domande</a>
+      <a href="#socio">Socio sostenitore</a>
+      <a class="btn btn-primary nav-cta" href="#socio">Diventa socio</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Apri il menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span>
+    </button>
+  </div>
 </header>
 
-<nav class="menu"><div class="wrap">
-<a href="#istituzione">Istituzione</a>
-<a href="#offerta">Offerta formativa</a>
-<a href="#metodo">Metodologia</a>
-<a href="#certificazioni">Certificazioni</a>
-<a href="#accesso">Accesso</a>
-</div></nav>
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="hero-badge">
+          <em>Istituzione accreditata</em> Formazione linguistica e metodologia didattica
+        </div>
+        <h1>La lingua come<br><span class="accent">disciplina.</span></h1>
+        <p class="hero-sub">
+          Un impianto didattico strutturato per la preparazione alle certificazioni
+          <strong>TOEFL, TOEIC, Trinity College, Italiano L2 e Kiswahili</strong>,
+          con simulazioni d'esame, valutazione automatica e analisi ragionata degli errori.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#piattaforme">
+            Scopri i corsi
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost btn-lg" href="#metodo">Come funziona</a>
+        </div>
+        <div class="hero-trust">
+          <span>Certificazioni</span>
+          <ul>
+            <li>TOEFL iBT</li>
+            <li>TOEIC</li>
+            <li>Trinity GESE · ISE</li>
+            <li>Italiano L2</li>
+          </ul>
+        </div>
+      </div>
 
-<section class="hero">
-<div class="wrap">
-<div>
-<span class="eyebrow">Piattaforma di E-Learning Accademico</span>
-<h2>La formazione linguistica di alto profilo, a distanza e con rigore scientifico</h2>
-<p>Un sistema integrato di apprendimento permanente per la preparazione alle certificazioni internazionali, fondato su ricerca didattica e sperimentazione pedagogica.</p>
-<div class="btns"><a href="#offerta" class="btn fill">Offerta formativa</a><a href="#metodo" class="btn out">Metodologia</a></div>
-</div>
-<div class="plate"><img src="./chatgpt-image-feb-19-2026-11-19-29-pm_orig.png" alt="Accademia delle Lingue - Eccellenza nella Formazione Linguistica"></div>
-</div>
+      <div class="hero-visual">
+        <div class="frame">
+          <img src="./images/chatgpt-image-feb-19-2026-11-19-29-pm.jpg"
+               alt="Accademia delle Lingue — formazione linguistica"
+               onerror="this.style.opacity=0">
+          <div class="frame-cap">
+            <b>Il tuo percorso, dal primo modulo al certificato</b>
+            <span>Step&nbsp;01</span>
+          </div>
+        </div>
+        <div class="float-card fc-1">
+          <div class="dot">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </div>
+          <div>
+            <b>Feedback immediato</b>
+            <small>Correzione automatica</small>
+          </div>
+        </div>
+        <div class="float-card fc-2">
+          <div class="dot">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <div>
+            <b>Accesso 24/7</b>
+            <small>Studia ai tuoi ritmi</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<div class="facts"><div class="wrap">
-<div class="fact"><b>VI</b><span>Portali didattici</span></div>
-<div class="fact"><b>III</b><span>Lingue</span></div>
-<div class="fact"><b>IV</b><span>Certificazioni</span></div>
-<div class="fact"><b>24/7</b><span>Accesso online</span></div>
-</div></div>
+<!-- ==================== BAND ==================== -->
+<div class="band">
+  <div class="band-inner">
+    <div class="band-item"><b>3</b><small>Lingue</small></div>
+    <div class="band-item"><b>6</b><small>Portali didattici</small></div>
+    <div class="band-item"><b>24/7</b><small>Sempre accessibile</small></div>
+    <div class="band-item"><b>Nazionale</b><small>e internazionale</small></div>
+  </div>
+</div>
 
-<section class="intro" id="istituzione">
-<div class="wrap">
-<div class="head">
-<span class="eyebrow">Presentazione istituzionale</span>
-<div class="rule"><i></i></div>
-<h3>Un centro di eccellenza per l'apprendimento permanente</h3>
-</div>
-<div class="cols">
-<div><h4>Missione</h4><p>L'Accademia delle Lingue è un centro di eccellenza nella formazione linguistica a distanza, operante nel campo dell'apprendimento permanente e della certificazione delle competenze. L'istituto sviluppa piattaforme e-learning attraverso un percorso pluriennale di ricerca didattica e sperimentazione pedagogica.</p></div>
-<div><h4>Apprendimento autonomo</h4><p>Il sistema consente l'apprendimento autonomo delle lingue straniere con successive verifiche delle competenze acquisite. L'accesso alla piattaforma è riservato agli utenti registrati, garantendo un ambiente strutturato e sicuro.</p></div>
-<div><h4>Architettura didattica</h4><p>Moduli di studio teorico, esercitazioni interattive e simulazione d'esame con rilevamento prestazionale immediato, feedback automatico e analisi degli errori: una preparazione ottimale agli esami ufficiali TOEFL, TOEIC e Trinity College.</p></div>
-</div>
-</div>
+<!-- ==================== PLATFORMS ==================== -->
+<section class="section platforms" id="piattaforme">
+  <div class="wrap">
+    <div class="section-head center rv">
+      <span class="eyebrow">Portali didattici</span>
+      <h2>Scegli la certificazione che ti serve</h2>
+      <p>Sei percorsi specializzati, ognuno con il proprio ambiente di studio, le simulazioni d'esame e il feedback automatico. Entra e inizia subito.</p>
+    </div>
+
+    <div class="grid-3">
+      <article class="card rv">
+        <a href="https://nucleoeducativo-nefeli.github.io/ACCADEMIA-DELLE-LINGUE/" target="_blank" rel="noopener">
+          <div class="card-top">
+            <img src="./images/chatgpt-image-mar-10-2026-11-18-14-pm.jpg" alt="Portale Accademico Principale" onerror="this.style.opacity=0">
+            <div class="card-ph"><span>01</span></div>
+            <div class="card-flag">Percorso completo</div>
+          </div>
+          <div class="card-body">
+            <h3>Portale Accademico</h3>
+            <p>Il sistema integrato per l'apprendimento generale delle lingue: moduli teorici, esercizi interattivi e verifica delle competenze acquisite.</p>
+            <span class="card-link">Accedi al portale
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card rv">
+        <a href="https://nucleoeducativo-nefeli.github.io/ACCADEMIA-DELLE-LINGUE-TRINITY-COLLEGE/" target="_blank" rel="noopener">
+          <div class="card-top">
+            <img src="./images/chatgpt-image-feb-19-2026-10-55-09-pm.jpg" alt="Preparazione Trinity College" onerror="this.style.opacity=0">
+            <div class="card-ph"><span>02</span></div>
+            <div class="card-flag">Trinity London</div>
+          </div>
+          <div class="card-body">
+            <h3>Trinity College</h3>
+            <p>Modulo dedicato agli esami GESE e ISE del Trinity College London: prove orali simulate, strutture d'esame e criteri di valutazione ufficiali.</p>
+            <span class="card-link">Accedi al modulo
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card rv">
+        <a href="https://nucleoeducativo-nefeli.github.io/ACCADEMIA-DELLE-LINGUE-TOEFL-AND-TOEIC/" target="_blank" rel="noopener">
+          <div class="card-top">
+            <img src="./images/chatgpt-image-feb-21-2026-08-05-23-pm.jpg" alt="Preparazione TOEFL e TOEIC" onerror="this.style.opacity=0">
+            <div class="card-ph"><span>03</span></div>
+            <div class="card-flag">Studio &amp; lavoro</div>
+          </div>
+          <div class="card-body">
+            <h3>TOEFL &amp; TOEIC</h3>
+            <p>La certificazione English Testing System per l'ammissione accademica e il riconoscimento professionale: reading, listening, speaking e writing.</p>
+            <span class="card-link">Accedi al modulo
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card rv">
+        <a href="https://nucleoeducativo-nefeli.github.io/simulazione-esami-cecol/" target="_blank" rel="noopener">
+          <div class="card-top">
+            <img src="./images/e11553dc-5d19-4f22-82df-446c8f0fbae8.jpg" alt="Simulazione esami di lingua italiana" onerror="this.style.opacity=0">
+            <div class="card-ph"><span>04</span></div>
+            <div class="card-flag">Italiano L2</div>
+          </div>
+          <div class="card-body">
+            <h3>Italiano L2</h3>
+            <p>Simulazione completa degli esami di certificazione della lingua italiana, con correzione automatizzata e analisi puntuale degli errori.</p>
+            <span class="card-link">Accedi alle simulazioni
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card is-static rv">
+        <div class="card-static">
+          <div class="card-top">
+            <img src="./images/kiswahili.jpg" alt="Kiswahili Academy" onerror="this.style.opacity=0">
+            <div class="card-ph"><span>05</span></div>
+            <div class="card-flag">Africa orientale</div>
+          </div>
+          <div class="card-body">
+            <h3>Kiswahili Academy</h3>
+            <p>Il centro specializzato nella lingua swahili e nelle culture dell'Africa orientale, per chi lavora, viaggia o fa cooperazione.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card rv">
+        <a href="https://nucleoeducativo-nefeli.github.io/giochi-didattici/" target="_blank" rel="noopener">
+          <div class="card-top">
+            <img src="./images/ac6b5a7a-da37-43db-b18d-9ab57efdd634.jpg" alt="Laboratorio didattico interattivo" onerror="this.style.opacity=0">
+            <div class="card-ph"><span>06</span></div>
+            <div class="card-flag">Per tutti</div>
+          </div>
+          <div class="card-body">
+            <h3>Laboratorio interattivo</h3>
+            <p>Apprendimento ludico per consolidare il lessico e la grammatica con attività interattive: ideale per iniziare senza pressione.</p>
+            <span class="card-link">Entra nel laboratorio
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </div>
+        </a>
+      </article>
+    </div>
+  </div>
 </section>
 
-<section id="offerta">
-<div class="wrap">
-<div class="head">
-<span class="eyebrow">Offerta formativa</span>
-<div class="rule"><i></i></div>
-<h3>Portali Didattici</h3>
-<p>Sei percorsi specialistici, ciascuno dedicato a un preciso obiettivo di studio e di certificazione.</p>
-</div>
-<div class="grid">
+<!-- ==================== PORTALE METODOLOGICO ==================== -->
+<section class="section portale" id="portale">
+  <div class="wrap">
+    <div class="portale-grid">
+      <figure class="portale-fig rv">
+        <img src="./images/due-insegnanti.jpg" alt="Due insegnanti che lavorano insieme su materiali didattici" loading="lazy">
+        <figcaption>
+          <b>Due docenti, un unico impianto metodologico</b>
+          <span>Progettazione condivisa dei materiali e verifica dei risultati</span>
+        </figcaption>
+      </figure>
 
-<a class="card" href="https://nucleoeducativo-nefeli.github.io/ACCADEMIA-DELLE-LINGUE/" target="_blank" rel="noopener">
-<span class="num">I</span>
-<div class="img"><img src="./chatgpt-image-mar-10-2026-11-18-14-pm_orig.png" alt="Portale Principale" loading="lazy"></div>
-<div class="cb"><span class="area">Formazione generale</span><h4>Portale Accademico Principale</h4>
-<p>Sistema integrato di apprendimento linguistico generale e certificazione delle competenze.</p>
-<span class="acc"><span>Accedi</span><span>→</span></span></div>
-</a>
+      <div class="portale-txt rv">
+        <span class="eyebrow">Didattica innovativa</span>
+        <h2>Un portale metodologico da dare agli studenti</h2>
+        <p>
+          Il nostro <strong>portale didattico interattivo</strong> non è una raccolta di esercizi: è un ambiente metodologico completo, pensato per essere assegnato agli studenti e seguito passo per passo.
+        </p>
+        <p>
+          Ogni unità contiene la spiegazione teorica, gli esercizi applicativi e i giochi didattici che consolidano quanto appreso. Lo studente non procede alla cieca: il sistema registra le risposte, mostra gli errori e gli restituisce una <strong>valutazione immediata</strong>, così sa sempre a che punto è.
+        </p>
 
-<a class="card" href="https://nucleoeducativo-nefeli.github.io/ACCADEMIA-DELLE-LINGUE-TRINITY-COLLEGE/" target="_blank" rel="noopener">
-<span class="num">II</span>
-<div class="img"><img src="./chatgpt-image-feb-19-2026-10-55-09-pm_orig.png" alt="Trinity College" loading="lazy"></div>
-<div class="cb"><span class="area">Lingua inglese</span><h4>Preparazione Trinity College</h4>
-<p>Modulo specifico per la preparazione agli esami GESE e ISE del Trinity College London.</p>
-<span class="acc"><span>Accedi</span><span>→</span></span></div>
-</a>
+        <ul class="portale-list">
+          <li>
+            <span class="ico">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </span>
+            <div>
+              <b>Spiegazioni strutturate</b>
+              <span>Ogni argomento è introdotto con una spiegazione chiara, esempi commentati e i casi in cui si sbaglia più spesso.</span>
+            </div>
+          </li>
+          <li>
+            <span class="ico">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="3"/><path d="M7 12h3M8.5 10.5v3M15 11h.01M17.5 13h.01"/></svg>
+            </span>
+            <div>
+              <b>Giochi didattici</b>
+              <span>Attività ludiche che trasformano il ripasso in pratica attiva: il lessico e le strutture si fissano senza noia.</span>
+            </div>
+          </li>
+          <li>
+            <span class="ico">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </span>
+            <div>
+              <b>Esercizi con autovalutazione</b>
+              <span>Lo studente riceve subito l'esito, con l'indicazione dell'errore e della regola da rivedere. Nessuna attesa, nessuna correzione differita.</span>
+            </div>
+          </li>
+          <li>
+            <span class="ico">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+            </span>
+            <div>
+              <b>Progressi misurabili</b>
+              <span>Il docente vede l'andamento della classe e interviene dove serve, invece di correggere a posteriori.</span>
+            </div>
+          </li>
+        </ul>
 
-<a class="card" href="https://nucleoeducativo-nefeli.github.io/ACCADEMIA-DELLE-LINGUE-TOEFL-AND-TOEIC/" target="_blank" rel="noopener">
-<span class="num">III</span>
-<div class="img"><img src="./chatgpt-image-feb-21-2026-08-05-23-pm_orig.png" alt="TOEFL TOEIC" loading="lazy"></div>
-<div class="cb"><span class="area">Lingua inglese</span><h4>Preparazione TOEFL &amp; TOEIC</h4>
-<p>Percorso dedicato alla certificazione English Testing System per contesti accademici e professionali.</p>
-<span class="acc"><span>Accedi</span><span>→</span></span></div>
-</a>
+        <a class="portale-link" href="https://giancarlovettori1973.github.io/portale-didattico-interattivo/" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>
+          giancarlovettori1973.github.io/portale-didattico-interattivo
+        </a>
 
-<a class="card" href="https://nucleoeducativo-nefeli.github.io/ACCADEMIA-DELLE-LINGUE--KISWAHILI-ACADEMY/" target="_blank" rel="noopener">
-<span class="num">IV</span>
-<div class="img"><img src="./kiswahili_orig.png" alt="Kiswahili" loading="lazy"></div>
-<div class="cb"><span class="area">Lingue e culture africane</span><h4>Kiswahili Academy</h4>
-<p>Centro specializzato nell'insegnamento della lingua swahili e delle culture dell'Africa orientale.</p>
-<span class="acc"><span>Accedi</span><span>→</span></span></div>
-</a>
-
-<a class="card" href="https://nucleoeducativo-nefeli.github.io/giochi-didattici/" target="_blank" rel="noopener">
-<span class="num">V</span>
-<div class="img"><img src="./ac6b5a7a-da37-43db-b18d-9ab57efdd634_orig.png" alt="Giochi Didattici" loading="lazy"></div>
-<div class="cb"><span class="area">Consolidamento</span><h4>Laboratorio Didattico Interattivo</h4>
-<p>Ambiente di apprendimento ludico per il consolidamento delle competenze linguistiche attraverso attività interattive.</p>
-<span class="acc"><span>Accedi</span><span>→</span></span></div>
-</a>
-
-<a class="card" href="https://nucleoeducativo-nefeli.github.io/simulazione-esami-cecol/" target="_blank" rel="noopener">
-<span class="num">VI</span>
-<div class="img"><img src="./e11553dc-5d19-4f22-82df-446c8f0fbae8_orig.png" alt="Simulazione CECOL" loading="lazy"></div>
-<div class="cb"><span class="area">Lingua italiana</span><h4>Simulazione Esami LINGUA ITALIANA</h4>
-<p>Piattaforma di testing per la simulazione completa degli esami di certificazione con valutazione automatizzata.</p>
-<span class="acc"><span>Accedi</span><span>→</span></span></div>
-</a>
-
-</div>
-</div>
+        <div>
+          <a class="btn btn-gold" href="https://giancarlovettori1973.github.io/portale-didattico-interattivo/" target="_blank" rel="noopener">
+            Apri il portale didattico
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="method" id="metodo">
-<div class="wrap">
-<div class="head">
-<span class="eyebrow">Metodologia didattica</span>
-<div class="rule"><i></i></div>
-<h3>Dalla teoria alla verifica delle competenze</h3>
-</div>
-<div class="pillars">
-<div class="pil"><div class="n">I</div><h4>Studio teorico</h4><p>Moduli strutturati per l'acquisizione sistematica delle competenze.</p></div>
-<div class="pil"><div class="n">II</div><h4>Esercitazione</h4><p>Attività interattive per consolidare quanto appreso.</p></div>
-<div class="pil"><div class="n">III</div><h4>Simulazione</h4><p>Prove d'esame con rilevamento prestazionale immediato.</p></div>
-<div class="pil"><div class="n">IV</div><h4>Analisi degli errori</h4><p>Feedback automatico per orientare il percorso di studio.</p></div>
-</div>
-</div>
+<!-- ==================== METHOD ==================== -->
+<section class="section method" id="metodo">
+  <div class="wrap">
+    <div class="section-head center rv">
+      <span class="eyebrow">Il metodo</span>
+      <h2>Quattro passi, dal primo giorno all'esame</h2>
+      <p>Nessun percorso a caso. Ogni modulo ti porta a un risultato misurabile, con la possibilità di vedere subito se stai migliorando.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step rv">
+        <div class="step-num">1</div>
+        <h3>Valuta il tuo livello</h3>
+        <p>Il test d'ingresso individua il tuo punto di partenza reale: così non perdi tempo su ciò che già sai, né salti ciò che ti manca.</p>
+      </div>
+      <div class="step rv">
+        <div class="step-num">2</div>
+        <h3>Segui il modulo</h3>
+        <p>Lezioni strutturate, esercizi guidati e spiegazioni mirate sugli errori tipici di chi affronta quell'esame specifico.</p>
+      </div>
+      <div class="step rv">
+        <div class="step-num">3</div>
+        <h3>Simula l'esame</h3>
+        <p>Prove complete nelle stesse condizioni dell'esame ufficiale, con valutazione automatica e analisi dettagliata delle risposte.</p>
+      </div>
+      <div class="step rv">
+        <div class="step-num">4</div>
+        <h3>Presentati preparato</h3>
+        <p>Arrivi all'esame sapendo esattamente cosa aspettarti, con il punteggio stimato e i punti deboli già corretti.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="certificazioni">
-<div class="wrap">
-<div class="head">
-<span class="eyebrow">Certificazioni di riferimento</span>
-<div class="rule"><i></i></div>
-<h3>Preparazione agli esami ufficiali</h3>
-</div>
-<div class="cert">
-<div>TOEFL<small>Contesto accademico</small></div>
-<div>TOEIC<small>Contesto professionale</small></div>
-<div>Trinity<small>GESE · ISE</small></div>
-<div>Italiano<small>Simulazione esami</small></div>
-</div>
-</div>
+<!-- ==================== CERTS ==================== -->
+<section class="section certs" id="certificazioni">
+  <div class="wrap">
+    <div class="cert-grid">
+      <div>
+        <div class="section-head rv" style="margin-bottom:32px">
+          <span class="eyebrow">Certificazioni</span>
+          <h2>Un certificato che vale, in Italia e all'estero</h2>
+          <p>Ogni percorso è costruito sul formato reale dell'esame, non su un programma generico.</p>
+        </div>
+        <div class="cert-list rv">
+          <div class="cert-row">
+            <div class="cert-ico">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div>
+              <b>TOEFL iBT</b>
+              <span>Per l'ammissione alle università italiane e straniere. Reading, listening, speaking e writing in un unico percorso.</span>
+            </div>
+          </div>
+          <div class="cert-row">
+            <div class="cert-ico">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            </div>
+            <div>
+              <b>TOEIC</b>
+              <span>Lo standard richiesto dalle aziende per la valutazione dell'inglese professionale. Utile per concorsi e curricula.</span>
+            </div>
+          </div>
+          <div class="cert-row">
+            <div class="cert-ico">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 15 8.5l7 1-5 5 1.2 7L12 18l-6.2 3.5L7 14.5l-5-5 7-1z"/></svg>
+            </div>
+            <div>
+              <b>Trinity College London</b>
+              <span>GESE (prova orale) e ISE (integrato). Riconosciuto nel mondo della scuola e della formazione, livello per livello.</span>
+            </div>
+          </div>
+          <div class="cert-row">
+            <div class="cert-ico">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg>
+            </div>
+            <div>
+              <b>Italiano L2</b>
+              <span>Per chi vive e lavora in Italia: certificazione delle competenze per permesso di soggiorno, università e lavoro.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="quote-box rv">
+        <div class="rule"></div>
+        <span class="eyebrow">Sapientia et Lingua</span>
+        <p>Non si studia una lingua per fare un esame. Si studia una lingua per aprire una porta: un lavoro, un'università, un Paese.</p>
+        <footer>— La filosofia didattica dell'Accademia</footer>
+      </aside>
+    </div>
+  </div>
 </section>
 
-<div class="band" id="accesso">
-<h3>Accedi alla piattaforma</h3>
-<p>L'accesso è riservato agli utenti registrati, in un ambiente strutturato e sicuro. Seleziona il portale di tuo interesse e avvia il percorso di formazione.</p>
-<a href="#offerta" class="btn">Consulta l'offerta formativa</a>
-</div>
+<!-- ==================== FAQ ==================== -->
+<section class="section faq" id="faq">
+  <div class="wrap">
+    <div class="section-head center rv">
+      <span class="eyebrow">Domande frequenti</span>
+      <h2>Prima di iniziare</h2>
+    </div>
+    <div class="faq-list">
+      <details class="rv">
+        <summary>Serve un livello minimo per iniziare?</summary>
+        <p>No. Il test d'ingresso serve proprio a capire da dove parti. Puoi iniziare anche da zero: il sistema ti propone i moduli adatti al tuo livello e ti fa salire gradualmente.</p>
+      </details>
+      <details class="rv">
+        <summary>Le simulazioni sono come l'esame vero?</summary>
+        <p>Sì. Ogni simulazione riproduce il formato ufficiale dell'esame scelto: stessa struttura delle prove, stessi tempi, stessi criteri di valutazione. Il punteggio che ottieni è una stima realistica di quello che prenderesti all'esame.</p>
+      </details>
+      <details class="rv">
+        <summary>Quanto tempo devo dedicarci?</summary>
+        <p>Dipende dal livello di partenza e dall'obiettivo. In media, chi studia 30-40 minuti al giorno arriva preparato in 2-3 mesi. Ma non ci sono scadenze: puoi andare al tuo ritmo, anche fermarti e riprendere.</p>
+      </details>
+      <details class="rv">
+        <summary>Da quale dispositivo posso accedere?</summary>
+        <p>Da computer, tablet e smartphone. Basta una connessione internet: i progressi si salvano e ritrovi tutto da qualsiasi dispositivo.</p>
+      </details>
+      <details class="rv">
+        <summary>Il certificato lo rilasciate voi?</summary>
+        <p>No, e questo è importante: l'Accademia ti prepara all'esame, ma la certificazione è rilasciata dall'ente ufficiale (ETS per TOEFL/TOEIC, Trinity College London, ente certificatore per l'italiano L2). Noi ti portiamo preparato all'esame, il certificato arriva da loro.</p>
+      </details>
+      <details class="rv">
+        <summary>Posso vedere la piattaforma prima di iscrivermi?</summary>
+        <p>Sì. Il portale accademico e il laboratorio didattico interattivo sono accessibili per la consultazione: puoi esplorare i moduli, provare il test di livello e vedere com'è strutturato un percorso prima di scegliere se aderire come socio.</p>
+      </details>
+    </div>
+  </div>
+</section>
 
-<footer>
-<b>Accademia delle Lingue</b>
-Centro di Eccellenza per la Formazione Linguistica · Sapientia et Lingua<br>
-<span style="display:block;margin-top:.7rem">&copy; 2026 Accademia delle Lingue. Tutti i diritti riservati.</span>
+<!-- ==================== FINAL CTA ==================== -->
+<section class="final">
+  <div class="final-inner">
+    <h2>Il certificato non si improvvisa.<br><em>Si prepara.</em></h2>
+    <p>Inizia dal test di livello: in dieci minuti sai esattamente da dove parti e quanto ti manca. Poi scegli il percorso che ti serve.</p>
+    <div class="final-actions">
+      <a class="btn btn-gold btn-lg" href="https://nucleoeducativo-nefeli.github.io/ACCADEMIA-DELLE-LINGUE/" target="_blank" rel="noopener">
+        Entra nel portale accademico
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn-ghost btn-lg" href="#socio">Diventa socio sostenitore</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SOCIO SOSTENITORE ==================== -->
+<section class="section socio" id="socio">
+  <div class="wrap">
+    <div class="section-head center rv">
+      <span class="eyebrow">Sostieni l'istituzione</span>
+      <h2>Diventa socio sostenitore</h2>
+      <p>L'Accademia delle Lingue opera all'interno del <strong>Nucleo educativo per la formazione europea al lavoro internazionale</strong>, istituzione accreditata a livello nazionale e internazionale. Chi ne condivide il progetto può sostenerlo come socio.</p>
+    </div>
+
+    <div class="istituto rv">
+      <span class="lbl">Istituzione di riferimento</span>
+      <h3>Nucleo educativo per la formazione europea<br>al lavoro internazionale</h3>
+      <p>Un ente che riunisce formazione linguistica, orientamento al lavoro internazionale e ricerca metodologica. L'Accademia delle Lingue ne è il braccio didattico: i percorsi, i materiali e le simulazioni d'esame nascono dentro questo quadro istituzionale, con un impianto riconosciuto in Italia e all'estero.</p>
+    </div>
+
+    <div class="socio-grid">
+      <div class="socio-card rv">
+        <div class="num">01</div>
+        <h4>Socio ordinario</h4>
+        <p>Per chi vuole sostenere il progetto formativo e restare aggiornato sulle attività dell'istituzione.</p>
+        <ul>
+          <li>Adesione annuale al Nucleo educativo</li>
+          <li>Comunicazioni istituzionali e report attività</li>
+          <li>Partecipazione all'assemblea dei soci</li>
+        </ul>
+      </div>
+
+      <div class="socio-card rv">
+        <div class="num">02</div>
+        <h4>Socio sostenitore</h4>
+        <p>Per chi vuole contribuire concretamente alla crescita dei percorsi e all'accesso alla formazione.</p>
+        <ul>
+          <li>Tutto quanto previsto per il socio ordinario</li>
+          <li>Sostegno diretto ai materiali didattici</li>
+          <li>Menzione nell'elenco dei sostenitori</li>
+          <li>Accesso prioritario alle iniziative dell'istituzione</li>
+        </ul>
+      </div>
+
+      <div class="socio-card rv">
+        <div class="num">03</div>
+        <h4>Socio istituzionale</h4>
+        <p>Per enti, scuole e associazioni che vogliono collegarsi al Nucleo educativo e ai suoi percorsi.</p>
+        <ul>
+          <li>Convenzione di collaborazione</li>
+          <li>Percorsi dedicati a studenti e personale</li>
+          <li>Partecipazione ai progetti di formazione europea</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="socio-note rv">
+      <b>Come si diventa soci.</b> La domanda di adesione si presenta al Nucleo educativo, indicando la categoria scelta e i propri dati. La segreteria verifica la domanda, la sottopone all'organo competente e comunica l'esito con le modalità di perfezionamento. Le quote associative e le condizioni sono definite dallo statuto dell'istituzione e vengono comunicate in fase di adesione: nessun costo è indicato in questa pagina.
+    </div>
+
+    <div class="socio-cta rv">
+      <a class="btn btn-primary btn-lg" href="mailto:giancarlo.vettori@anief.net?subject=Domanda%20di%20adesione%20come%20socio%20sostenitore%20-%20Nucleo%20educativo">
+        Richiedi l'adesione come socio
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand" style="margin-bottom:0">
+          <div class="brand-mark"><span>AL</span></div>
+          <div class="brand-txt">
+            <b>Accademia delle Lingue</b>
+            <small style="color:var(--gold-2)">Formazione linguistica</small>
+          </div>
+        </div>
+        <p>Centro di formazione linguistica a distanza: preparazione alle certificazioni internazionali e apprendimento permanente, con simulazioni d'esame e feedback immediato. Opera nell'ambito del Nucleo educativo per la formazione europea al lavoro internazionale.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Percorsi</h4>
+        <ul>
+          <li><a href="https://nucleoeducativo-nefeli.github.io/ACCADEMIA-DELLE-LINGUE/" target="_blank" rel="noopener">Portale accademico</a></li>
+          <li><a href="https://nucleoeducativo-nefeli.github.io/ACCADEMIA-DELLE-LINGUE-TRINITY-COLLEGE/" target="_blank" rel="noopener">Trinity College</a></li>
+          <li><a href="https://nucleoeducativo-nefeli.github.io/ACCADEMIA-DELLE-LINGUE-TOEFL-AND-TOEIC/" target="_blank" rel="noopener">TOEFL &amp; TOEIC</a></li>
+          <li><a href="https://nucleoeducativo-nefeli.github.io/simulazione-esami-cecol/" target="_blank" rel="noopener">Italiano L2</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Informazioni</h4>
+        <ul>
+          <li><a href="#portale">Portale didattico</a></li>
+          <li><a href="#metodo">Il metodo</a></li>
+          <li><a href="#certificazioni">Certificazioni</a></li>
+          <li><a href="#faq">Domande frequenti</a></li>
+          <li><a href="#socio">Socio sostenitore</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Accademia delle Lingue. Tutti i diritti riservati.</span>
+      <span class="lat">Sapientia et Lingua</span>
+    </div>
+  </div>
 </footer>
 
+<script>
+(function(){
+  'use strict';
+
+  /* --- nav shadow on scroll --- */
+  var nav = document.getElementById('nav');
+  var onScroll = function(){
+    if (window.scrollY > 12) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* --- mobile menu --- */
+  var burger = document.getElementById('burger');
+  var links  = document.getElementById('navLinks');
+  if (burger && links) {
+    burger.addEventListener('click', function(){
+      var open = links.classList.toggle('open');
+      burger.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
+    });
+    Array.prototype.forEach.call(links.querySelectorAll('a'), function(a){
+      a.addEventListener('click', function(){
+        links.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded','false');
+      });
+    });
+  }
+
+  /* --- reveal on scroll --- */
+  var items = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+    Array.prototype.forEach.call(items, function(el, i){
+      el.style.transitionDelay = (Math.min(i, 6) * 55) + 'ms';
+      io.observe(el);
+    });
+  } else {
+    Array.prototype.forEach.call(items, function(el){ el.classList.add('in'); });
+  }
+
+  /* --- close menu on resize --- */
+  window.addEventListener('resize', function(){
+    if (window.innerWidth > 860 && links) {
+      links.classList.remove('open');
+      if (burger) {
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded','false');
+      }
+    }
+  });
+})();
+</script>
 </body>
 </html>
